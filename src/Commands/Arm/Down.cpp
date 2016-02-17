@@ -8,7 +8,7 @@ Down::Down()
 void Down::Initialize()
 {
 	datalogger->Log("Down::Initialize()", STATUS_MESSAGE);
-//	arm->lifter_motor->Set(-1.0 * SPEED);
+	arm->lifterMotor->Set(-1.0 * SPEED);
 }
 
 void Down::Execute()
@@ -24,11 +24,11 @@ bool Down::IsFinished()
 void Down::End()
 {
 	datalogger->Log("Down::End()", ERROR_MESSAGE);
-//	arm->lifter_motor->Set(0);
+	arm->lifterMotor->Set(0);
 }
 
 void Down::Interrupted()
 {
 	datalogger->Log("Down::Interrupted()", STATUS_MESSAGE);
-//	arm->lifter_motor->Set(0);
+	arm->lifterMotor->Set(0);
 }

@@ -4,6 +4,8 @@
 #include "../../CommandBase.h"
 #include "WPILib.h"
 
+#define KP 0.1
+
 class GyroTest: public CommandBase
 {
 public:
@@ -13,7 +15,6 @@ public:
 	bool IsFinished();
 	void End();
 	void Interrupted();
-	const float kP = 0.3;
 };
 
 #endif

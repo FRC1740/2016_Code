@@ -13,7 +13,7 @@ void GyroTest::Initialize()
 void GyroTest::Execute()
 {
 	float angle = drivetrain->steeringGyro->GetAngle();
-	drivetrain->Go(0.5 - angle * kP, 0.5 + angle * kP);
+	drivetrain->Go(-angle * KP, -angle * KP);
 }
 
 bool GyroTest::IsFinished()

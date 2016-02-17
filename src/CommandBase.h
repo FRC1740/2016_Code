@@ -1,21 +1,17 @@
 #ifndef COMMAND_BASE_H
 #define COMMAND_BASE_H
 
+//Include all subsystems
 #include <string>
 #include "Commands/Command.h"
-#include "OI.h"
 #include "WPILib.h"
-#include "Subsystems/Piston.h"
-#include "Subsystems/DriveTrain.h"
-#include "Subsystems/RangeFinder.h"
+#include "OI.h"
 #include "Subsystems/Arm.h"
 #include "Subsystems/DataLogger.h"
+#include "Subsystems/DriveTrain.h"
+#include "Subsystems/Piston.h"
+#include "Subsystems/RangeFinder.h"
 
-/**
- * The base for all commands. All atomic commands should subclass CommandBase.
- * CommandBase stores creates and stores each control system. To access a
- * subsystem elsewhere in your code in your code use CommandBase.examplesubsystem
- */
 class CommandBase: public Command
 {
 public:
@@ -24,10 +20,10 @@ public:
 	static void init();
 	// Create a single static instance of all of your subsystems
 	static OI *oi;
+	static Arm *arm;
 	static DataLogger *datalogger;
 	static DriveTrain *drivetrain;
 	static Piston *piston;
-	static Arm *arm;
 	static RangeFinder *rangefinder;
 };
 
