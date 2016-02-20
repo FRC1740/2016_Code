@@ -18,7 +18,7 @@ void Down::Execute()
 
 bool Down::IsFinished()
 {
-	return false;
+	return arm->lifterMotor->IsRevLimitSwitchClosed();
 }
 
 void Down::End()

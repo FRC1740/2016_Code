@@ -12,6 +12,7 @@ public:
 	CANTalon *lifterMotor;
 	CANTalon *extenderMotor;
 	Encoder *armEncoder;
+	USBCamera *armCamera;
 	Arm();
 };
 

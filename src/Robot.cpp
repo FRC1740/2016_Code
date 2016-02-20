@@ -10,7 +10,7 @@
 #include "Commands/Drive_Modes/ThreeAxisTankDrive.h"
 #include "Commands/Drive_Modes/XBoxArcadeDrive.h"
 #include "Commands/Drive_Modes/XBoxTankDrive.h"
-
+#include "Commands/Arm/ArmControl.h"
 class CommandBasedRobot : public IterativeRobot {
 private:
 	// TODO can i initialize a pointer to datalogger here?
@@ -69,6 +69,8 @@ private:
 	{
 //		->Log("Entering TeleopInit()", STATUS_MESSAGE);
 //		autonomousCommand->Cancel();
+		teleopcommand = new ArmControl();
+		teleopcommand->Start();
 		teleopcommand = (Command *) drivemodechooser->GetSelected();
 		teleopcommand->Start();
 //		->End();
@@ -77,6 +79,7 @@ private:
 	virtual void TeleopPeriodic()
 	{
 		Scheduler::GetInstance()->Run();
+
 	}
 
 	virtual void TestPeriodic()

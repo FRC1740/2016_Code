@@ -30,10 +30,12 @@ OI::OI()
 	NESB = new JoystickButton(NESController, 2);
 	NESA = new JoystickButton(NESController, 1);
 
+
 //	threeAxis3->WhenPressed(new ExtendPiston()); //pneumatic piston
 //	threeAxis4->WhenPressed(new RetractPiston()); // pneumatic piston
-	threeAxis5->WhileHeld(new Up());
-	threeAxis6->WhileHeld(new Down());
-	threeAxis3->WhileHeld(new Out());
-	threeAxis4->WhileHeld(new In());
+//	threeAxis5->WhileHeld(new Up());
+//	threeAxis6->WhileHeld(new Down());
+//	threeAxis3->WhileHeld(new Out());
+//	threeAxis4->WhileHeld(new In());
 }
+
