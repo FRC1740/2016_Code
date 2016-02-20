@@ -9,8 +9,11 @@
 class Arm: public Subsystem
 {
 public:
-	CANTalon *lifter_motor;
-	CANTalon *extender_motor;
+	CANTalon *lifterMotor;
+	CANTalon *extenderMotor;
+	Encoder *lifterEncoder;
+	Encoder *extenderEncoder;
+	USBCamera *armCamera;
 	Arm();
 };
 

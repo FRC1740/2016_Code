@@ -8,7 +8,7 @@ Up::Up()
 void Up::Initialize()
 {
 	datalogger->Log("Up::Initialize()", STATUS_MESSAGE);
-//	arm->lifter_motor->Set(SPEED);
+	arm->lifterMotor->Set(SPEED);
 }
 
 void Up::Execute()
@@ -24,11 +24,11 @@ bool Up::IsFinished()
 void Up::End()
 {
 	datalogger->Log("Up::End()", ERROR_MESSAGE);
-//	arm->lifter_motor->Set(0);
+	arm->lifterMotor->Set(0);
 }
 
 void Up::Interrupted()
 {
 	datalogger->Log("Up::Interrupted()", STATUS_MESSAGE);
-//	arm->lifter_motor->Set(0);
+	arm->lifterMotor->Set(0);
 }

@@ -10,6 +10,9 @@ public:
 	CANTalon *leftMotor2;
 	CANTalon *rightMotor1;
 	CANTalon *rightMotor2;
+	Encoder *leftEncoder;
+	Encoder *rightEncoder;
+	AnalogGyro *steeringGyro;
 	DriveTrain();
 	void Go(float, float);
 	void Stop();

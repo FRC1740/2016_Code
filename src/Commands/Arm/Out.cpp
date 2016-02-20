@@ -8,7 +8,7 @@ Out::Out()
 void Out::Initialize()
 {
 	datalogger->Log("Out::Initialize()", STATUS_MESSAGE);
-//	arm->extender_motor->Set(1.0);
+	arm->extenderMotor->Set(1.0);
 }
 
 void Out::Execute()
@@ -24,11 +24,11 @@ bool Out::IsFinished()
 void Out::End()
 {
 	datalogger->Log("Out::End()", ERROR_MESSAGE);
-//	arm->extender_motor->Set(0);
+	arm->extenderMotor->Set(0);
 }
 
 void Out::Interrupted()
 {
 	datalogger->Log("Out::Interrupted()", STATUS_MESSAGE);
-//	arm->extender_motor->Set(0);
+	arm->extenderMotor->Set(0);
 }

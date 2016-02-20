@@ -1,13 +1,15 @@
 #include "WPILib.h"
 #include "Commands/Command.h"
 #include "CommandBase.h"
-#include "Commands/Miscellaneous/DoNothing.h"
-#include "Commands/Autonomous/BasicAuto.h"
-#include "Commands/Autonomous/DriveThroughObstacle.h"
-#include "Commands/Drivetrain/StandardTankDrive.h"
-#include "Commands/Drivetrain/ThreeAxisTankDrive.h"
-#include "Commands/Drivetrain/XBoxArcadeDrive.h"
-#include "Commands/Drivetrain/XBoxTankDrive.h"
+#include "Commands/Autonomous/DoNothing.h"
+#include "Commands/Autonomous/RoughTerrain.h"
+#include "Commands/Autonomous/LowBar.h"
+#include "Commands/Autonomous/EncoderTest.h"
+#include "Commands/Autonomous/GyroTest.h"
+#include "Commands/Drive_Modes/StandardTankDrive.h"
+#include "Commands/Drive_Modes/ThreeAxisTankDrive.h"
+#include "Commands/Drive_Modes/XBoxArcadeDrive.h"
+#include "Commands/Drive_Modes/XBoxTankDrive.h"
 
 class CommandBasedRobot : public IterativeRobot {
 private:
@@ -34,8 +36,10 @@ private:
 //		->Log("added objects", VERBOSE_MESSAGE);
 		autonomouschooser = new SendableChooser();
 		autonomouschooser->AddDefault("Do Nothing", new DoNothing(15));
-		autonomouschooser->AddObject("Basic Auto: Drive Forward", new BasicAuto());
-		autonomouschooser->AddObject("Drive Through Obstacle", new DriveThroughObstacle());
+		autonomouschooser->AddObject("Rough Terrain", new RoughTerrain(1000));
+		autonomouschooser->AddObject("Low Bar", new LowBar());
+		autonomouschooser->AddObject("Encoder Test", new EncoderTest(125));
+		autonomouschooser->AddObject("Gyro Test", new GyroTest());
 		SmartDashboard::PutData("Autonomous", autonomouschooser);
 
 		lw = LiveWindow::GetInstance();
