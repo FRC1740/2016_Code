@@ -4,7 +4,10 @@
 #include "../../CommandBase.h"
 #include "WPILib.h"
 
-#define KP 0.1
+#define PID_KP 0.1
+#define PID_KI 0.1
+#define PID_KD 0.1
+#define PID_INTEGRAL_LIMIT 1000
 
 class GyroTest: public CommandBase
 {
@@ -15,6 +18,10 @@ public:
 	bool IsFinished();
 	void End();
 	void Interrupted();
+	float pidError;
+	float pidLastError;
+	float pidIntegral;
+	float pidDerivative;
 };
 
 #endif

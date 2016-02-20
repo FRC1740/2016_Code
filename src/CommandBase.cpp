@@ -9,7 +9,7 @@ DriveTrain*	CommandBase::drivetrain = NULL;
 Piston* CommandBase::piston = NULL;
 RangeFinder* CommandBase::rangefinder = NULL;
 
-CommandBase::CommandBase(char const *name): Command(name) {}
+//CommandBase::CommandBase(char const *name): Command(name) {}
 
 CommandBase::CommandBase(): Command() {}
 

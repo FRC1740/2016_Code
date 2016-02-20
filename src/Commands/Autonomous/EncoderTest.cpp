@@ -13,7 +13,7 @@ void EncoderTest::Initialize()
 //	drivetrain->leftEncoder->Reset();
 //	drivetrain->rightEncoder->Reset();
 //	drivetrain->Go(0.5 * LEFT_FORWARD, 0.5 * RIGHT_FORWARD);
-	arm->armEncoder->Reset();
+
 	arm->extenderMotor->Set(0.5);
 }
 
@@ -28,7 +28,7 @@ bool EncoderTest::IsFinished()
 	{
 		return true;
 	}*/
-	if(abs(arm->armEncoder->Get()) >= count)
+	if(abs(arm->lifterEncoder->Get()) >= count)
 	{
 		return true;
 	}

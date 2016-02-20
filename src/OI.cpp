@@ -34,6 +34,6 @@ OI::OI()
 //	threeAxis4->WhenPressed(new RetractPiston()); // pneumatic piston
 	threeAxis5->WhileHeld(new Up());
 	threeAxis6->WhileHeld(new Down());
-	threeAxis3->WhileHeld(new Out());
-	threeAxis4->WhileHeld(new In());
+	threeAxis3->WhileHeld(new In());
+	threeAxis4->WhileHeld(new Out());
 }
