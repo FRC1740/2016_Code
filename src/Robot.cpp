@@ -1,6 +1,8 @@
 #include "WPILib.h"
 #include "Commands/Command.h"
 #include "CommandBase.h"
+#include "Commands/Autonomous/Forward.h"
+#include "Commands/Autonomous/Reverse.h"
 #include "Commands/Autonomous/DoNothing.h"
 #include "Commands/Autonomous/EncoderTest.h"
 #include "Commands/Autonomous/GyroTest.h"

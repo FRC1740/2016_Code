@@ -19,18 +19,16 @@ void ArmControl::Execute()
 	arm->lifterMotor->Set(oi->threeAxisJoystick->GetY());
 	printf("Setting Arm Control... \n");
 	int anglePOV;
-<<<<<<< HEAD
 
 	/* Fancy code to keep arm from extending too far (Doesn't work)
 	int length = arm->extenderEncoder->Get();
-=======
->>>>>>> refs/remotes/FRC1740/master
+
 	// This mess is to make sure the arm doesn't extend more than 15 inches past the perimeter of the robot
 	//int l = 27.9 - arm->lifterEncoder->Get();
 	//int d = arm->extenderEncoder->Get();
 	//d < -((l+72.15) * sqrt(-0.00001*(pow(l, 4)-1250*pow(l, 2)+290800)) * cos(29) + 0.001532 * (pow(l, 3)+72.15*pow(l, 2)-625.255*l-1200002)) / (sqrt(-0.00001*(pow(l, 4)-1250*pow(l, 2)+290800)) * cos(29) + 0.001532 * (pow(l, 2)-625.255));
 
-<<<<<<< HEAD
+
 	// If the driver tries to move down while the arm is out too far, it won't move
 	if (lengthCorrection > 15)
 	{
@@ -41,9 +39,9 @@ void ArmControl::Execute()
 		arm->lifterMotor->Set(0);
 	}
 	/* */
-=======
+
 	arm->lifterMotor->Set(oi->threeAxisJoystick->GetY());
->>>>>>> refs/remotes/FRC1740/master
+
 	anglePOV = oi->threeAxisJoystick->GetPOV();
 
 	if (anglePOV == -1)
@@ -64,7 +62,7 @@ void ArmControl::Execute()
 
 			/* Fancy code to keep arm from extending too far (Doesn't work)
 			// This should be down, so retract the arm
-<<<<<<< HEAD
+
 			// If the driver tries to extend the arm while it is out too far, it won't move
 			if (lengthCorrection > 15)
 			{
@@ -75,9 +73,7 @@ void ArmControl::Execute()
 				arm->extenderMotor->Set(0);
 			}
 			/* */
-=======
-			arm->extenderMotor->Set(-1);
->>>>>>> refs/remotes/FRC1740/master
+
 		}
 	}
 	/* */

@@ -6,8 +6,8 @@
 
 class LowBar: public CommandGroup
 {
-public:
-	LowBar();
+	public:
+		LowBar();
 };
 
 #endif

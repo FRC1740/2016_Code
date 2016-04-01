@@ -5,7 +5,7 @@ RoughTerrain::RoughTerrain(long distance)
 	Requires(drivetrain);
 	count = (distance * 360L) / 280L; // distance (mm) * 1/280 (rev/mm) * 360 counts/rev
 	timer = 0;
-	printf("RoughTerrain Contstructor");
+	printf("RoughTerrain Constructor");
 }
 
 void RoughTerrain::Initialize()
@@ -21,6 +21,7 @@ void RoughTerrain::Execute()
 
 bool RoughTerrain::IsFinished()
 {
+	// Kludge City... Really want to get the encoder system working
 	timer += 20;		// Execute & IsFinished are called every 20 msec
 	if (timer > 5500) 	// ... so this should timeout after 5.5 seconds
 		return true;
