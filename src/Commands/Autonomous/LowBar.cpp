@@ -12,10 +12,4 @@ LowBar::LowBar()
 	AddSequential(new Forward(3000));
 	AddSequential(new Pause(200));
 	AddSequential(new Reverse(3000));
-	AddSequential(new Pause(200));
-	AddSequential(new Forward(3000));
-	AddSequential(new Pause(200));
-	AddSequential(new Reverse(3000));
-	AddSequential(new Pause(200));
-	// AddSequential(new RoughTerrain(10000));
 }
